@@ -6,7 +6,7 @@ class Board
         @board = build_board(knight)
     end
 
-    def build_board(knight, all_posible_edges = [], queue = [], all_posible_positions = [knight.current_position])
+    def build_board(knight, queue = [], all_posible_positions = [knight.current_position])
         return if knight.nil?
 
         knight_position = knight.current_position
@@ -20,7 +20,7 @@ class Board
                 knight.knights.push(new_knight)
             end
         end
-        build_board(queue.pop, all_posible_edges, queue, all_posible_positions)
+        build_board(queue.pop, queue, all_posible_positions)
         knight
     end
 

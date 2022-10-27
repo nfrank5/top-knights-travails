@@ -15,11 +15,11 @@ def knight_moves(origin, target)
     puts "You made it in #{moves} #{ moves == 1 ? 'move' : 'moves'}! Here's your path:"
     path.each do |square|
         puts "#{square}"
-    end
+    end 
 
 end
 
-knight_moves([0,0],[1,2])
+knight_moves([0,0],[1,0])
 
 knight_moves([0,0],[3,3])
 
